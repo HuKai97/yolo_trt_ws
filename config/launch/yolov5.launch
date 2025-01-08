@@ -1,0 +1,28 @@
+<!-- Launch file for yolov5 -->
+<launch>
+    <arg name="max_batch_size" default="1" />
+    <arg name="num_classes" default="6" />
+    <arg name="gpu_id" default="0" />
+    <arg name="verbose" default="false" />
+    <arg name="conf_threshold" default="0.5" />
+    <arg name="nms_threshold" default="0.5" />
+    <arg name="image_width" default="1920" />
+    <arg name="image_height" default="1080" />
+    <arg name="model_sim" default="false" />    
+    <arg name="model_type" default="m" />  
+    <arg name="input_topic" default="/tztek/camera1"/>
+
+    <node pkg="yolov5" type="yolov5" name="yolov5" output="screen">
+        <param name="max_batch_size" value="$(arg max_batch_size)"/>
+        <param name="num_classes" value="$(arg num_classes)"/>
+        <param name="gpu_id" value="$(arg gpu_id)"/>
+        <param name="verbose" value="$(arg verbose)"/>
+        <param name="conf_threshold" value="$(arg conf_threshold)"/>
+        <param name="nms_threshold" value="$(arg nms_threshold)"/>
+        <param name="image_width" value="$(arg image_width)"/>
+        <param name="image_height" value="$(arg image_height)"/>
+        <param name="model_sim" value="$(arg model_sim)"/>
+        <param name="model_type" value="$(arg model_type)"/>
+        <param name="input_topic" value="$(arg input_topic)"/>
+    </node>
+</launch>

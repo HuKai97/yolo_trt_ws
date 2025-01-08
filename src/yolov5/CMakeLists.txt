@@ -24,7 +24,10 @@ include_directories(
     ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(yolov5 src/main.cpp)
+add_executable(yolov5 
+    src/main.cpp
+    src/detect_cv.cpp
+)
 
 target_link_libraries(yolov5 
     ${catkin_LIBRARIES}

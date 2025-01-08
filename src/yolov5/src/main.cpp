@@ -1,7 +1,9 @@
-#include <iostream>
+#include "detect_cv.h"
 
-
-
-int main() {
-    std::cout << "hello world." << std::endl;
+int main(int argc, char** argv) 
+{
+    ros::init(argc, argv, "yolov5");
+    DetectCV node;
+    ros::spin();
+    return 0;
 }
