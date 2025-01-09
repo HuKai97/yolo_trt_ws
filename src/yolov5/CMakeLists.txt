@@ -15,7 +15,11 @@ find_package(catkin REQUIRED COMPONENTS
     sensor_msgs
     std_msgs
     std_srvs
+    image_transport
 )
+
+# yaml
+find_package(yaml-cpp REQUIRED)
 
 catkin_package()
 
@@ -31,5 +35,6 @@ add_executable(yolov5
 
 target_link_libraries(yolov5 
     ${catkin_LIBRARIES}
+    yaml-cpp
 )
 

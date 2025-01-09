@@ -1,0 +1,13 @@
+yolov5:
+    root_path:   "/home/hk/code/yolo_trt_ws/config"
+    onnx_file:     "weights/yolov5m_best.onnx"
+    engine_file:   "weights/yolov5m_best.engine"
+    label_file:   "labels.names"
+    max_batch_size:    1
+    width:   640
+    height:  640
+    obj_threshold: 0.25  
+    nms_threshold: 0.45 
+    agnostic:      True
+    strides:       [8, 16, 32]
+    anchors:       [[10,13], [16,30], [33,23], [30,61], [62,45], [59,119], [116,90], [156,198], [373,326]]  # coco setdata anchor size.
