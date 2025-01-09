@@ -1,4 +1,4 @@
-yolov5:
+detect:
     root_path:   "/home/hk/code/yolo_trt_ws/config"
     onnx_file:     "weights/yolov5m_best.onnx"
     engine_file:   "weights/yolov5m_best.engine"
